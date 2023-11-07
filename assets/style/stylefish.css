@@ -1,0 +1,100 @@
+/* Thiết lập mặc định lại các padding và margin cho tất cả thẻ trong trang html */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+#background_image{
+    background-color: aqua;
+}
+#background_image img{
+    width: 100%;
+    height: 100vh; 
+}
+
+#shark
+{
+	position: absolute;
+	left:100px; top:400px;
+	width: 200px; height: 147px;
+	/* Tên của animation */
+	animation-name: Shark;
+	/* Thời gian thực hiện animation */
+	animation-duration: 10s;
+	/* Kiểu thực hiện animation */
+	animation-timing-function: ease-in-out;
+	
+	animation-iteration-count:infinite;
+	/* Trạng thái */
+	animation-play-state: running;	
+	
+	/*  */
+	transform:scaleX(1)
+}
+@-webkit-keyframes Shark
+{
+	0%   {left:100px; top:400px;}
+	10%   {left:100px; top:400px;}
+	20%  {left:700px; top:400px;}
+	40%  {left:700px; -webkit-transform:scaleX(-1);}
+	60%  {left:700px; top:100px; -webkit-transform:scaleX(-1);}
+	90%  {left:500px; top:100px; -webkit-transform:scaleX(-1);}
+	100% {left:500px; top:400px; -webkit-transform:scaleX(-1);}
+}
+#container
+{
+    position: relative;
+}
+#so{
+    position: absolute;
+    left: 110px;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    bottom: 50px;
+}
+#ca{
+    position: absolute;
+    top: 0px;
+    width: 150px;
+    transform: scaleX(-1);
+    animation: Fish1 5s ease-in-out 0s infinite;
+}
+#ca img{
+    width: 100%;
+}
+@keyframes Fish1{
+    0%{top:0px;right: -100px;}
+    20%{top:100px;right: 30px;transform: rotate(-30deg);}
+    40%{top:0px;right: 500px; transform: rotate(30deg);}
+    60%{top:0px;right: 700px;transform: rotate(0deg);}
+    80%{top:150px;right: 800px;transform: rotate(-40deg);}
+    100%{top:0px;right: 1700px;transform: rotate(0deg);}
+}
+#bachtuot{
+    position: absolute;
+    /* top: 0px; */
+    left: 30%;
+    width: 150px;
+    animation: Bachtuot 10s ease-in-out 0s infinite;
+}
+#bachtuot img {
+    width: 100%;
+}
+@keyframes Bachtuot{
+    0%{bottom: 0%;}
+    20%{bottom: 20%;}
+    40%{bottom: 40%;}
+    60%{bottom: 50%;}
+    80%{bottom: 60%;}
+    100%{bottom: 80%;}
+}
+.btn_change_bg{
+    outline: none;
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+    padding: 15px;
+}
